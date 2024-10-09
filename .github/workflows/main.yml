@@ -3,7 +3,8 @@ name: Scheduled Health Check
 # Controls when the action will run.
 on:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "*/15 * * * *"  # Ejecuta cada 15 minutos
+  workflow_dispatch:  # Permite ejecución manual
 
 jobs:
   health_check_job:
